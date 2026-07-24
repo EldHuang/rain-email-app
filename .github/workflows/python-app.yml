@@ -38,8 +38,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-        # env:
+        env:
           # Your secrets are available as environment variables
           # Add more secrets in Settings > Secrets > Actions
+          api_key: ${{ secrets.API_KEY}}
+          MY_LAT: ${{ secrets.MY_LAT}}
+          MY_LONG: ${{ secrets.MY_LONG}}
+          TO_EMAIL: ${{ secrets.TO_EMAIL}}
+          MY_EMAIL: ${{ secrets.MY_EMAIL}}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD}}
           
         run: python main.py
