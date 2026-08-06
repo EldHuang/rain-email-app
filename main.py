@@ -13,8 +13,8 @@ TO_EMAIL = os.environ.get("TO_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 parameters = {
-    "lat": MY_LAT,
-    "lon": MY_LONG,
+    "lat": 37.335480,
+    "lon": -121.893028,
     "cnt": 4,
 }
 
