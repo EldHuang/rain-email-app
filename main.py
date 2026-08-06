@@ -16,13 +16,10 @@ parameters = {
     "lat": 37.335480,
     "lon": -121.893028,
     "cnt": 4,
-}
-
-headers = {
     "appid": API_KEY
 }
 
-response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", params=parameters, headers=headers)
+response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", params=parameters)
 response.raise_for_status()
 
 weather_data = response.json()
