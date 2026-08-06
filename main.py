@@ -15,11 +15,14 @@ MY_PASSWORD = os.environ.get("MY_PASSWORD")
 parameters = {
     "lat": MY_LAT,
     "lon": MY_LONG,
-    "appid": api_key,
     "cnt": 4,
 }
 
-response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", params=parameters)
+headers = {
+    "appid": api_key
+}
+
+response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", params=parameters, headers=headers)
 response.raise_for_status()
 
 weather_data = response.json()
