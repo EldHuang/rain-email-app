@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.environ.get("API_KEY")
+API_KEY = os.environ.get("API_KEY")
 MY_LAT = os.environ.get("MY_LAT")
 MY_LONG = os.environ.get("MY_LONG")
 MY_EMAIL = os.environ.get("MY_EMAIL")
@@ -19,7 +19,7 @@ parameters = {
 }
 
 headers = {
-    "appid": api_key
+    "appid": API_KEY
 }
 
 response = requests.get(url="https://api.openweathermap.org/data/2.5/forecast", params=parameters, headers=headers)
